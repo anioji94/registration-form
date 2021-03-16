@@ -10,6 +10,8 @@ const password2 = document.getElementById('password2');
 function showError(input, message) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control error';
+	const small = formControl.querySelector('small');
+	small.innerText = message;
 }
 
 function showSuccess(input, message) {
@@ -26,4 +28,6 @@ form.addEventListener('submit', function(e) {
 	} else {
 		showSuccess(username);
 	}
+
+	
 })
